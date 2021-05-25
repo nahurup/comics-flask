@@ -1,0 +1,26 @@
+{% extends './base.html' %}
+
+{% block title %} Index {% endblock %}
+
+{% block container %}
+<div class="row">
+
+    {% for comic in data %}
+
+        <div class="card">
+            <img class="card-img-top" src="{{ comic.img_url }}">
+            <div class="card-body">
+            <h5 class="card-title">{{ comic.name }}</h5>
+            </div>
+        </div>
+
+    {% endfor %}
+
+
+
+</div>
+{% endblock %}
+           
+           
+           
+
