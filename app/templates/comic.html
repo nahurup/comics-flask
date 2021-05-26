@@ -1,0 +1,31 @@
+{% extends './base.html' %}
+
+{% block title %} Index {% endblock %}
+
+{% block container %}
+<div class="row">
+    <ul class="list-group">
+
+        {% for issue in data %}
+
+            <li class="list-group-item">
+            
+                <a href="/comic/{{ comic_name }}/{{ issue.issue_number }}">
+                    
+                    {{ issue.name }}
+
+                </a>
+
+            
+            </li>
+
+        {% endfor %}
+
+    </ul>
+
+</div>
+{% endblock %}
+           
+           
+           
+

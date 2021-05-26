@@ -23,7 +23,7 @@ def get_list(page):
 
     for comic in comics_container:
         comic_name = comic.a.text
-        comic_url = comic.a['href']
+        comic_url = ((comic.a['href']).rsplit('/', 1)[1])
         comic_img = ("https://readcomicsonline.ru/uploads/manga/"+((comic.a['href']).rsplit('/', 1)[1])+"/cover/cover_250x350.jpg")
 
         comics_list.append(Comic(comic_name, comic_url, comic_img))
