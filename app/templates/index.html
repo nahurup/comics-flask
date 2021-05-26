@@ -7,15 +7,28 @@
 
     {% for comic in data %}
 
-        <div class="card">
-            <img class="card-img-top" src="{{ comic.img_url }}">
-            <div class="card-body">
-            <h5 class="card-title">{{ comic.name }}</h5>
+        <a href="/{{ comic.url }}">
+            <div class="card">
+                <img class="card-img-top" src="{{ comic.img_url }}">
+                <div class="card-body">
+                <h5 class="card-title">{{ comic.name }}</h5>
+                </div>
             </div>
-        </div>
+        </a>
 
     {% endfor %}
+    
+    <div class="pagination">
+        {% for number in range(1, pages_number+1, 1) %}
+            
+            {% if number == page %}
+                <a href="/{{ number }}" class="active">{{ number }}</a>
+            {% else %}
+                <a href="/{{ number }}">{{ number }}</a>
+            {% endif %}
 
+        {% endfor %}
+    </div>
 
 
 </div>
