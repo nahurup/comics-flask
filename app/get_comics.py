@@ -12,6 +12,7 @@ class Comic:
 
 
 def get_list(page):
+    comics_list = []
     url = 'https://readcomicsonline.ru/latest-release?page='+str(page)
     response = get(url)
 
@@ -28,3 +29,16 @@ def get_list(page):
         comics_list.append(Comic(comic_name, comic_url, comic_img))
     
     return comics_list
+
+def get_pages():
+    url = 'https://readcomicsonline.ru/latest-release?page=1'
+    response = get(url)
+
+    html_soup = BeautifulSoup(response.text, 'html.parser')
+    type(html_soup)
+
+    pagination_block = html_soup.find('ul', class_ = 'pagination')
+
+    pages = pagination_block.findAll('li')
+
+    return int(pages[len(pages)-2].text)

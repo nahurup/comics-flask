@@ -1,13 +1,13 @@
 from flask import Flask, render_template
-from .get_comics import get_list
+from .get_comics import get_list, get_pages
 
 
 app=Flask(__name__)
 
-@app.route('/')
-def index():
-    data=get_list(1)
-    return render_template('index.html', data=data)
+@app.route('/<page>')
+def index(page):
+    data=get_list(page)
+    return render_template('index.html', data=data, pages_number=get_pages(), page=page)
 
 
 def inicializarApp(config):
