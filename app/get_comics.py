@@ -30,7 +30,7 @@ def get_list(page):
     
     return comics_list
 
-def get_pages():
+def get_pagination_max():
     url = 'https://readcomicsonline.ru/latest-release?page=1'
     response = get(url)
 
