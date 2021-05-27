@@ -21,7 +21,6 @@ def get_pages(comic_name, issue_number):
 
 def cant_pages(comic_name, issue_number):
     url = 'https://readcomicsonline.ru/comic/'+comic_name+'/'+issue_number
-    print(url)
     response = get(url)
 
     html_soup = BeautifulSoup(response.text, 'html.parser')

@@ -21,7 +21,8 @@ def comic(comic_name):
 @app.route('/comic/<comic_name>/<issue_number>')
 def issue(comic_name, issue_number):
     issue=get_pages(comic_name, issue_number)
-    return render_template('issue.html', issue=issue)
+    comic_info=get_info(comic_name)
+    return render_template('issue.html', issue=issue, issue_number=issue_number, comic_info=comic_info)
 
 def inicializarApp(config):
     app.config.from_object(config)

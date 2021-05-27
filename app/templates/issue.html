@@ -1,15 +1,23 @@
 {% extends './base.html' %}
 
-{% block title %} Index {% endblock %}
+{% block title %} Issue #{{ issue_number }} {% endblock %}
 
 {% block container %}
 <div class="row">
+    <h1 class="display-4 fst-italic">{{ comic_info[0] }} | Issue #{{ issue_number }}</h1>
 
-    {% for page_url in issue %}
+    <div class="pages-container">
 
-        <img src="{{ page_url }}" class="img-fluid">
+        {% for page_url in issue %}
 
-    {% endfor %}
+            <br>
+            <br>
+            <p class="mb-0 text-bold text-center">Page {{ loop.index }}</p>
+            <img src="{{ page_url }}" class="img-fluid">
+
+        {% endfor %}
+
+    </div>
 
 </div>
 {% endblock %}
