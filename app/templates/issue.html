@@ -1,0 +1,19 @@
+{% extends './base.html' %}
+
+{% block title %} Index {% endblock %}
+
+{% block container %}
+<div class="row">
+
+    {% for page_url in issue %}
+
+        <img src="{{ page_url }}" class="img-fluid">
+
+    {% endfor %}
+
+</div>
+{% endblock %}
+           
+           
+           
+
