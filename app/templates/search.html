@@ -7,20 +7,18 @@
 
     {% if resultados|length == 0 %}
 
-        <h3>Sorry! we couldn't find results for: "{{ search_words }}"</h3>
+        <h3 class="display-4 fst-italic" style="width: 100%;">Sorry! we couldn't find results for: "{{ search_words }}"</h3>
 
     {% else %}
 
-        <h3>Results for: "{{ search_words }}"</h3>
+        <h3 class="display-4 fst-italic" style="width: 100%;">Results for: "{{ search_words }}"</h3>
 
         {% for comic in resultados %}
 
             <a href="/comic/{{ comic.name }}">
                 <div class="card">
                     <img class="card-img-top" src="https://readcomicsonline.ru/uploads/manga/{{ comic.name }}/cover/cover_250x350.jpg">
-                    <div class="card-body">
-                    <h5 class="card-title">{{ comic.title }}</h5>
-                    </div>
+                    <h4 class="text-medium">{{ comic.title }}</h4>
                 </div>
             </a>
 
