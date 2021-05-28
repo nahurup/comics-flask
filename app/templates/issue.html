@@ -19,6 +19,21 @@
 
     </div>
 
+    <div class="pagination">
+        <ul class="pagination2 btnround">
+            {% if issue_number != 1 %}
+                <li><a href="/comic/{{ comic_name }}/{{ issue_number-1 }}">« Previous Issue</a></li>
+            {% endif %}
+
+            <li><a class="active" href="#" style="border:none !important;border-radius:5px;">{{ issue_number }}/{{ comic_info[5] }}</a></li>
+
+            {% if issue_number != comic_info[5] %}
+                <li><a href="/comic/{{ comic_name }}/{{ issue_number+1 }}">Next Issue »</a></li>
+            {% endif %}
+
+        </ul>
+    </div>
+
 </div>
 {% endblock %}
            

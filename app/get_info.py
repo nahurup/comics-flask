@@ -7,7 +7,8 @@ comic_info = {
     'status': " ",
     'date': 0,
     'views': 0,
-    'rating': 0
+    'rating': 0,
+    'max_issues': 0
 }
 
 class Issue:
@@ -33,5 +34,9 @@ def get_info(name):
     info_container = html_soup.find_all('h2', class_ = 'listmanga-header')
     
     comic_info[0] = info_container[0].text #title
+
+    info_container = html_soup.find_all('li', class_ = 'volume-0')
+
+    comic_info[5] = len(info_container)
     
     return comic_info
