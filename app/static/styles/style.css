@@ -1,31 +1,53 @@
 body {
-    padding-top: 5rem;
-  }
-  .starter-template {
-    padding: 3rem 1.5rem;
-    text-align: center;
-  }
-
-/* Pagination links */
-.pagination a {
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background-color .3s;
+  background-color: #202020;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color: var(--color-gray6);
 }
 
-/* Style the active/current link */
-.pagination a.active {
-  background-color: dodgerblue;
-  color: white;
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
 }
-
-/* Add a grey background color on mouse-over */
-.pagination a:hover:not(.active) {background-color: #ddd;}
 
 .card {
+  color: #f2f2f2;
+  background-color: unset;
+  padding: 3px;
   width: 160px;
+}
+
+.card h4 {
+  font-size: 14px;
+  position: absolute;
+  bottom: -5px;
+  padding: 6px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+  width: 153px;
+}
+
+.form-inline .form-control {
+  background-color: rgba(255,255,255,0.032);
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar-dark {
+  background-color: #171717;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.text-medium {
+  font-weight: 600;
 }
 
 .comic-header {
@@ -34,4 +56,69 @@ body {
 
 .pages-container {
   width: 100%;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.pagination2 {
+  display: inline-block;
+  padding: 0;
+  margin: 8px auto;
+}
+
+.pagination2 li {
+  display: inline;
+}
+
+.pagination2 li a {
+  color: white;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ul.pagination2 li a.active {
+  background-color: #523661;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.btnround li a {
+  border-radius: 5px;
+}
+
+ul.pagination2 li a:hover:not(.active) {
+  background-color: #3c3a3a;
+}
+
+.pagination a {
+  border-radius: 5px;
+}
+
+.pagination a.active {
+  border-radius: 5px;
+}
+
+.navbar-content {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  padding-top: 12px;
 }

@@ -17,7 +17,7 @@ def index():
 @app.route('/<page>')
 def pages(page):
     data=get_list(page)
-    return render_template('index.html', data=data, pages_number=get_pagination_max(), page=page)
+    return render_template('index.html', data=data, pages_number=get_pagination_max(), page=int(page))
 
 @app.route('/comic/<comic_name>')
 def comic(comic_name):
