@@ -10,33 +10,41 @@
             <img src="https://readcomicsonline.ru/uploads/manga/{{ comic_name }}/cover/cover_250x350.jpg">
         </div>
         
-        <div class="col-md-6 px-0">
+        <div class="comic-info-text col-md-6 px-0">
             <h1 class="display-4 fst-italic">{{ comic_info[0] }}</h1>
+            <br>
             <p class="lead mb-0 text-white fw-bold">Status: {{ comic_info[1] }}</p>
+            <br>
             <p class="lead mb-0 text-white fw-bold">Date: {{ comic_info[2] }}</p>
+            <br>
             <p class="lead mb-0 text-white fw-bold">Views: {{ comic_info[3] }}</p>
+            <br>
             <p class="lead mb-0 text-white fw-bold">Rating: {{ comic_info[4] }}</p>
         </div>
+        <br>
+        <h2>Issues:</h2>
+        <ul class="list-group">
+
+            {% for issue in data %}
+
+                <li class="list-group-item">
+                
+                    <a href="/comic/{{ comic_name }}/{{ issue.issue_number }}">
+                        
+                        {{ issue.name }}
+
+                    </a>
+
+                
+                </li>
+
+            {% endfor %}
+
+        </ul>
+
     </div>
 
-    <ul class="list-group">
 
-        {% for issue in data %}
-
-            <li class="list-group-item">
-            
-                <a href="/comic/{{ comic_name }}/{{ issue.issue_number }}">
-                    
-                    {{ issue.name }}
-
-                </a>
-
-            
-            </li>
-
-        {% endfor %}
-
-    </ul>
 
 </div>
 {% endblock %}

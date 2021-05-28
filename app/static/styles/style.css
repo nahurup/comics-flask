@@ -122,3 +122,37 @@ ul.pagination2 li a:hover:not(.active) {
 .container {
   padding-top: 12px;
 }
+
+.comic-cover {
+  width: auto;
+  float: right;
+}
+
+.list-group a {
+  color: black;
+}
+
+.display-4 {
+  color: white;
+  margin: 0 auto;
+}
+
+.pages-container p {
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .comic-cover {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .comic-info-text {
+    text-align: center;
+  }
+
+  .comic-header h2 {
+    text-align: center;
+  }
+}
