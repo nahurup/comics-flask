@@ -7,16 +7,24 @@
     <h1 class="display-4 fst-italic">{{ comic_info[0] }} | Issue #{{ issue_number }}</h1>
 
     <div class="pages-container">
+        <div class="tz-gallery">
 
-        {% for page_url in issue %}
+            <div class="row">
 
-            <br>
-            <br>
-            <p class="mb-0 text-bold text-center">Page {{ loop.index }}</p>
-            <img src="{{ page_url }}" class="img-fluid">
+                {% for page_url in issue %}
 
-        {% endfor %}
+                    <div class="col-sm-12 col-md-4">
+                        <a class="lightbox" href="{{ page_url }}">
+                            <img src="{{ page_url }}" alt="Bridge">
+                        </a>
+                    </div>
 
+                {% endfor %}
+
+
+            </div>
+
+        </div>
     </div>
 
     <div class="pagination">
