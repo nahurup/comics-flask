@@ -18,14 +18,14 @@
 
     <div class="pagination">
         <ul class="pagination2 btnround">
-            {% if page != 1 %}
-                <li><a href="/{{ page-1 }}">«</a></li>
+            {% if page|int != 1 %}
+                <li><a href="/{{ page|int -1 }}">«</a></li>
             {% endif %}
 
             <li><a class="active" href="#" style="border:none !important;border-radius:5px;">{{ page }}/{{ pages_number }}</a></li>
 
-            {% if page != pages_number %}
-                <li><a href="/{{ page+1 }}">»</a></li>
+            {% if page|int != pages_number %}
+                <li><a href="/{{ page|int +1 }}">»</a></li>
             {% endif %}
 
         </ul>
