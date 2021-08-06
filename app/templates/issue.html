@@ -21,7 +21,7 @@
 
     <div class="pagination">
         <ul class="pagination2 btnround">
-            {% if issue_number | int != 1 %}
+            {% if issue_number|int != 1 %}
                 <li><a href="/comic/{{ comic_name }}/{{ issue_number-1 }}">« Previous Issue</a></li>
             {% endif %}
 
