@@ -29,7 +29,7 @@ def comic(comic_name):
 def issue(comic_name, issue_number):
     issue=get_pages(comic_name, issue_number)
     comic_info=get_info(comic_name)
-    return render_template('issue.html', issue=issue, issue_number=int(issue_number), comic_info=comic_info, comic_name=comic_name)
+    return render_template('issue.html', issue=issue, issue_number=issue_number, comic_info=comic_info, comic_name=comic_name)
 
 @app.route('/search')
 def search():
